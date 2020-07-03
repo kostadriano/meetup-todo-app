@@ -1,0 +1,31 @@
+.ComponentWrapper_name {
+  text-align: center;
+}
+
+.ComponentWrapper_content {
+  display: flex;
+  border: 1px solid lightgray;
+  align-items: stretch;
+}
+
+.ComponentWrapper_code {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 10px;
+  width: 50%;
+  overflow: auto;
+  margin: 0;
+  border-left: 1px solid lightgray;
+  max-width: 300px;
+  font-size: small;
+  text-align: start;
+}
+
+.ComponentWrapper_children{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
