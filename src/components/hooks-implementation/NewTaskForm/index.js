@@ -1,33 +1,36 @@
 import React, { useState } from 'react'
+import ComponentWrapper from '../../ComponentWrapper'
 
 const NewTaskForm = ({ handleSubmit }) => {
-  const [task, setTask] = useState({
-    description: ''
-  });
+  const [task, setTask] = useState("");
 
   const handleChange = ({ target }) => {
     const { value } = target;
 
-    setTask({
-      description: value
-    });
+    setTask(value);
   }
 
   const onSubmit = event => {
     event.preventDefault();
 
     handleSubmit(task);
-    setTask({ description: '' });
+    setTask("");
   }
 
   return (
-    <form onSubmit={onSubmit}>
-      <input name='description' value={task.description} onChange={handleChange} />
+    <ComponentWrapper
+      name="<NewTaskForm/>"
+      state={{ task }}
+      props={{ handleSubmit }}
+    >
+      <form onSubmit={onSubmit}>
+        <input name='description' value={task} onChange={handleChange} />
 
-      <button type='submit'>
-        Save Task
-      </button>
-    </form>
+        <button type='submit'>
+          Save Task
+        </button>
+      </form>
+    </ComponentWrapper>
   )
 }
 

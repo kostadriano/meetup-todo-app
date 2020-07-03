@@ -1,9 +1,15 @@
 import React from 'react'
+import ComponentWrapper from '../../ComponentWrapper'
 
 const Task = ({ task }) => (
-  <li>
-    {task.description}
-  </li>
+  <ComponentWrapper
+    name="<Task/>"
+    props={{ task }}
+  >
+    <li>
+      {task}
+    </li>
+  </ComponentWrapper>
 )
 
 export default Task
