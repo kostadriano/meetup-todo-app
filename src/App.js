@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
 
-import HooksImplementation from './components/hooks-implementation';
+import TasksApp from './components/TasksApp';
 
 function App() {
   return (
     <div className="App">
       <div className="App-content">
-        <HooksImplementation />
+        <TasksApp />
       </div>
     </div>
   );
